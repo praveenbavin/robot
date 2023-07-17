@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+   
+    .head{
+      background-color: rgb(211, 198, 11);
+    }
+
+.torso{
+  background-color: rgb(36, 216, 216);
+}
+.left_arm,
+.right_arm{
+  background-color: blue;
+}
+.left_leg{
+  background-color: blue;
+}
+.right_leg {
+  background-color :blue;
+}
+
+.head {
+  width: 190px;
+  margin: 0 auto;
+  height: 130px;
+  border-radius: 200px 200px 0 0;
+  border-radius: 250px;
+  margin-bottom: 10px;
+}
+
+.eyes {
+  position: relative;
+  top: 20px;
+}
+
+.left_eye,
+.right_eye {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: rgb(221, 9, 9);
+  display: inline-block;
+}
+.nose{
+  width: 35px;
+  height: 20px;
+  border-radius: 15px;
+   background-color: rgb(23, 24, 24); 
+
+ 
+}
+.nose{
+ position: relative;
+ top :30px;
+ left: 80px;
+ 
+}
+
+.left_eye {
+  margin-left: 30px;
+}
+
+.right_eye {
+  margin-left: 90px;
+}
+
+.upper_body {
+  width: 230px;
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.left_arm,
+.right_arm {
+  width: 40px;
+  height: 125px;
+  border-radius: 100px;
+  margin-top: 20px;
+}
+
+.left_arm {
+  margin-right: 10px;
+}
+
+.left_arm {
+  margin-right: 10px;
+}
+
+.right_arm {
+  margin-left: 10px;
+}
+
+.torso {
+  width: 200px;
+  height: 200px;
+  border-radius: 0 0 50px 50px;
+  transition: border-radius 2s;
+}
+
+.lower_body {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.left_leg,
+.right_leg {
+  width: 40px;
+  height: 120px;
+  border-radius: 0 0 100px 100px;
+  display: inline-block;
+}
+
+.left_leg {
+  margin-left: 45px;
+}
+
+.right_leg {
+  margin-left: 30px;
+}
+
+ .robots .head {
+  
+ color: rgb(56, 201, 20);
+ 
+}  
+
+/* .robots .torso {
+  border-radius: 40%;
+  animation: movetorso 1s infinite;
+}  */
+
+.robots .left_arm {
+  animation: moveleftarm 10s infinite;
+}
+
+.robots .right_arm {
+  animation: moverightarm 10s infinite;
+}
+
+.robots .left_leg {
+  animation:   moverightleg 10s infinite;
+}
+
+.robots .right_leg {
+  animation: moverightleg 10s infinite;
+}
+img{
+  width: 120px;
+  border-radius: 100px;
+}
+@keyframes movehead {
+  0% {
+    width: 200px;
+  }
+
+  25% {
+    width: 300px;
+  }
+
+  50% {
+    width: 200px;
+  }
+
+  75% {
+    width: 300px;
+  }
+
+  100% {
+    width: 200px;
+  }
+}
+
+@keyframes moveleftarm {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  25% {
+    transform: rotate(90deg);
+    transform-origin: top center;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  75% {
+    transform: rotate(90deg);
+    transform-origin: top center;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+@keyframes moverightarm {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  25% {
+    transform: rotate(-90deg);
+    transform-origin: top center;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  75% {
+    transform: rotate(-90deg);
+    transform-origin: top center;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+@keyframes moveleftleg {
+  0% {
+    transform: rotate(-20deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moverightleg {
+  0% {
+    transform: rotate(20deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes movetorso {
+  from {
+    transform: rotate(10deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+
+
+}
+
+  </style>
+
+</head>
+<body>
+    
+    <div class="container">
+  <div class="robots">
+    <div class="android">
+      <div class="head">
+        <div class="eyes">
+          <div class="left_eye"></div>
+         
+          <div class="right_eye"></div>
+          <div class="nose"></div>
+        </div>
+      </div>
+      <div class="upper_body">
+        <div class="left_arm"></div>
+        <div class="torso"> </div>
+        <div class="right_arm"></div>
+      </div>
+      <div class="lower_body">
+        <div class="left_leg"></div>
+        <div class="right_leg"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
